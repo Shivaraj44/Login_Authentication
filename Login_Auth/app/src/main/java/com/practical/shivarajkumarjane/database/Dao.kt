@@ -17,8 +17,5 @@ interface Dao {
     @Query("Select * FROM Login Where Mobile_no = :mobile and Password= :password")
      fun  login(mobile: String,password: String):LiveData<Model>
 
-    @NonNull
-    @Query("Select * FROM Login Where Mobile_no = :mobile ")
-    fun  display(mobile: String):LiveData<Model>
 
 }

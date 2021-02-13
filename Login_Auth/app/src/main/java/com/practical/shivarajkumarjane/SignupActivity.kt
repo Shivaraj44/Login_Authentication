@@ -15,7 +15,7 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         signupViewModel = ViewModelFactory(this).create(Signup_ViewModel::class.java)
 
-        click.setOnClickListener(View.OnClickListener {
+        Save.setOnClickListener(View.OnClickListener {
 
             signupViewModel.insert(
                 0,

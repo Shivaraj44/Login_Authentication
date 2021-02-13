@@ -136,7 +136,7 @@ android:layout_alignParentStart="true"
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/click"
+        android:id="@+id/Save"
         android:text="login page"
         />
 

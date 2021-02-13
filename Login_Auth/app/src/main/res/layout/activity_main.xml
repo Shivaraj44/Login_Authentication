@@ -55,8 +55,15 @@
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/btn_check"
-    android:text="check"
+    android:id="@+id/Login"
+    android:text="Login"
     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now User"
+        android:textSize="@dimen/text_size_22sp"
+
+        />
 
 </LinearLayout>
