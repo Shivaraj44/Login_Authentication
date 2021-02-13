@@ -1,4 +1,4 @@
-package com.practical.shivarajkumarjane
+package com.practical.shivarajkumarjane.splashscreen
 
 import android.content.Context
 import com.practical.shivarajkumarjane.database.Database
@@ -7,7 +7,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class Repository {
+/**
+ * The model class which has repository and using Coroutines and inserting to database
+ */
+class Signup_Repository {
 
     fun InserttoRepositery(
         id: Int, first_name: String, last_name: String, mobile_no: String, email: String,

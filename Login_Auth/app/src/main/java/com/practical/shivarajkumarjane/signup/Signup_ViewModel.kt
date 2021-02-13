@@ -1,10 +1,14 @@
-package com.practical.shivarajkumarjane
+package com.practical.shivarajkumarjane.signup
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
+import com.practical.shivarajkumarjane.splashscreen.Signup_Repository
 
+/**
+ * Viewmodel which acts bridge between model and view , in model we are using repository class and inserting
+ */
  class Signup_ViewModel(private val context: Context) : ViewModel() {
-    private val repository = Repository()
+    private val repository = Signup_Repository()
 
     fun insert(
         id: Int,

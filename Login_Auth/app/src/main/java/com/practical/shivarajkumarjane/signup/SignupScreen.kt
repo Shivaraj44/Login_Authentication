@@ -1,19 +1,25 @@
-package com.practical.shivarajkumarjane
+package com.practical.shivarajkumarjane.signup
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.practical.shivarajkumarjane.R
+import com.practical.shivarajkumarjane.login.LoginScreen
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
-class SignupActivity : AppCompatActivity() {
+/**
+ * In this Inserting data to database with all the user information using viewmodel
+ */
+class SignupScreen : AppCompatActivity() {
 
     lateinit var signupViewModel: Signup_ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-        signupViewModel = ViewModelFactory(this).create(Signup_ViewModel::class.java)
+        signupViewModel = Signup_ViewModelFactory(this).create(Signup_ViewModel::class.java)
 
         Save.setOnClickListener(View.OnClickListener {
 
@@ -26,7 +32,12 @@ class SignupActivity : AppCompatActivity() {
                 gender = user_gender.text.toString(),
                 password = user_password.text.toString()
             )
-            val intent=Intent(this,LoginActivity::class.java)
+            val intent=Intent(this, LoginScreen::class.java)
+            startActivity(intent)
+        })
+
+        signup.setOnClickListener(View.OnClickListener {
+            val intent=Intent(this, SignupScreen::class.java)
             startActivity(intent)
         })
     }
