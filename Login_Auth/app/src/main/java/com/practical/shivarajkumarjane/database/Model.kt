@@ -15,7 +15,7 @@ data class Model(
     @ColumnInfo(name = "Last name")
     val Lastname: String,
 
-    @ColumnInfo(name = "Mobile no")
+    @ColumnInfo(name = "Mobile_no")
     val Mobileno: String,
 
     @ColumnInfo(name = "Email")

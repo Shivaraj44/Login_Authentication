@@ -8,16 +8,16 @@ import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {
 
-    lateinit var viewModel: ViewModel
+    lateinit var signupViewModel: Signup_ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-        viewModel = ViewModelFactory(this).create(ViewModel::class.java)
+        signupViewModel = ViewModelFactory(this).create(Signup_ViewModel::class.java)
 
         click.setOnClickListener(View.OnClickListener {
 
-            viewModel.insert(
+            signupViewModel.insert(
                 0,
                 first_name = user_first_name.text.toString(),
                 last_name = user_last_name.text.toString(),
